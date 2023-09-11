@@ -6,6 +6,6 @@ export default async function handler(
   response: NextApiResponse
 ) {
   const pets = await sql`SELECT * FROM Pets;`;
-  //   return response.status(200).json({ pets: pets.rows });
-  return response.status(200).json({ pets });
+    return response.status(200).json({ pets: pets.rows });
+  // return response.status(200).json({ pets });
 }
